@@ -1,0 +1,45 @@
+version: "2"
+
+run:
+  timeout: 5m
+
+linters:
+  default: all
+  disable:
+    # Deprecated in golangci-lint v2.
+    - gomodguard
+    - wsl
+
+    # Too restrictive for small CLI/internal packages.
+    - depguard
+    - err113
+    - exhaustruct
+    - funcorder
+    - funlen
+    - gochecknoglobals
+    - goconst
+    - gosmopolitan
+    - ireturn
+    - lll
+    - mnd
+    - nlreturn
+    - noctx
+    - noinlineerr
+    - nonamedreturns
+    - tagliatelle
+    - testpackage
+    - varnamelen
+    - wrapcheck
+    - wsl_v5
+
+  settings:
+    cyclop:
+      max-complexity: 15
+    gocognit:
+      min-complexity: 20
+    revive:
+      severity: warning
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
