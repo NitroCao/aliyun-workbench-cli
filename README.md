@@ -9,12 +9,8 @@
 
 ## 安装
 
-从源码构建：
-
 ```bash
-go build -o $HOME/.local/bin/aliyun-workbench ./cmd/aliyun-workbench
-
-export PATH=$HOME/.local/bin:$PATH
+go install github.com/nitrocao/aliyun-workbench-cli/cmd/aliyun-workbench@latest
 
 aliyun-workbench --help
 

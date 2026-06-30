@@ -8,12 +8,8 @@ Use `aliyun-workbench-cli` to connect to ECS instances from your local terminal 
 
 ## Installation
 
-Build from source:
-
 ```bash
-go build -o $HOME/.local/bin/aliyun-workbench ./cmd/aliyun-workbench
-
-export PATH=$HOME/.local/bin:$PATH
+go install github.com/nitrocao/aliyun-workbench-cli/cmd/aliyun-workbench@latest
 
 aliyun-workbench --help
 
